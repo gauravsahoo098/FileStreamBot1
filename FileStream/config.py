@@ -10,7 +10,7 @@ class Telegram:
     OWNER_ID = int(env.get('OWNER_ID', '7080468611'))
     WORKERS = int(env.get("WORKERS", "30"))  # 6 workers = 6 commands at once
     DATABASE_URL = str(env.get('DATABASE_URL', 'mongodb+srv://epiksam14:epiksam14@cluster0.tbudcc3.mongodb.net/?retryWrites=true&w=majority'))
-    UPDATES_CHANNEL = str(env.get('UPDATES_CHANNEL', "swegos"))
+    UPDATES_CHANNEL = str(env.get('UPDATES_CHANNEL', "swegosfilechannel"))
     SESSION_NAME = str(env.get('SESSION_NAME', 'FileStream'))
     FORCE_SUB_ID = env.get('FORCE_SUB_ID', None)
     FORCE_SUB = env.get('FORCE_UPDATES_CHANNEL', False)
@@ -32,9 +32,9 @@ class Server:
     PING_INTERVAL = int(env.get("PING_INTERVAL", "1200"))
     HAS_SSL = str(env.get("HAS_SSL", "0").lower()) in ("1", "true", "t", "yes", "y")
     NO_PORT = str(env.get("NO_PORT", "1").lower()) in ("1", "true", "t", "yes", "y")
-    FQDN = str(env.get("FQDN", "154.41.252.55:9090"))
+    FQDN = str(env.get("FQDN", "154.41.252.55:80"))
     URL = "http{}://{}{}/".format(
-        "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
+        "s" if HAS_SSL else "", FQDN, "154.41.252.55" if NO_PORT else ":" + str(PORT)
     )
 
 
