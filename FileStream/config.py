@@ -8,7 +8,7 @@ class Telegram:
     API_HASH = str(env.get("API_HASH", 'd85872e77a1dedc1829ff27727f5d393'))
     BOT_TOKEN = str(env.get("BOT_TOKEN", '6838132221:AAHcyCK9Qej7lN7bGpuSMlRvmXUiaZLTO9k'))
     OWNER_ID = int(env.get('OWNER_ID', '7080468611'))
-    WORKERS = int(env.get("WORKERS", "30"))  # 6 workers = 6 commands at once
+    WORKERS = int(env.get("WORKERS", "50"))  # 6 workers = 6 commands at once
     DATABASE_URL = str(env.get('DATABASE_URL', 'mongodb+srv://epiksam14:epiksam14@cluster0.tbudcc3.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(env.get('UPDATES_CHANNEL', "swegosfilechannel"))
     SESSION_NAME = str(env.get('SESSION_NAME', 'FileStream'))
