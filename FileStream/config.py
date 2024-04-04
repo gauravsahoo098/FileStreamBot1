@@ -28,7 +28,7 @@ class Telegram:
 
 class Server:
     PORT = int(env.get("PORT", "80"))
-    BIND_ADDRESS = str(env.get("BIND_ADDRESS", "https://swegos-movie-70612609d2c2.herokuapp.com/"))
+    BIND_ADDRESS = str(env.get("BIND_ADDRESS", ""))
     PING_INTERVAL = int(env.get("PING_INTERVAL", "1200"))
     HAS_SSL = str(env.get("HAS_SSL", "1").lower()) in ("1", "true", "t", "yes", "y")
     NO_PORT = str(env.get("NO_PORT", "1").lower()) in ("1", "true", "t", "yes", "y")
