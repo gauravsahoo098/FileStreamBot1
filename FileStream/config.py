@@ -32,9 +32,9 @@ class Server:
     PING_INTERVAL = int(env.get("PING_INTERVAL", "1200"))
     HAS_SSL = str(env.get("HAS_SSL", "1").lower()) in ("1", "true", "t", "yes", "y")
     NO_PORT = str(env.get("NO_PORT", "1").lower()) in ("1", "true", "t", "yes", "y")
-    FQDN = str(env.get("FQDN", "uclaadhar.cloud"))
+    FQDN = str(env.get("FQDN", "154.41.252.55"))
     URL = "http{}://{}{}/".format(
-        "s" if HAS_SSL else "1", FQDN, "uclaadhar.cloud" if NO_PORT else ":" + str(PORT)
+        "s" if HAS_SSL else "1", FQDN, "154.41.252.55" if NO_PORT else ":" + str(PORT)
     )
 
 
